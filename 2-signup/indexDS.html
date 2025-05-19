@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Signup example</title>
+    <link rel="stylesheet" href="signup.css" />
+  </head>
+  <body>
+    <form>
+        <!-- Name fields -->
+        <div>
+          <input id="first-name-field">
+          <input id="last-name-field">
+          <p id="validation-name"></p>
+        </div>
+      
+        <!-- Email field -->
+        <div>
+          <input id="email-field" type="email">
+          <p id="validation-email"></p>
+        </div>
+      
+        <!-- Programming languages -->
+        <div>
+          <ul id="language-list">
+            <li contenteditable="true"
+                class="placeholder"
+                data-placeholder-content="Your favorite programming languages (3 required)">
+            </li>
+          </ul>
+          <p id="validation-languages"></p>
+        </div>
+      
+        <!-- Captcha section -->
+        <div>
+          <input id="capcha-field">
+          <a id="reload-btn"></a>
+          <p id="validation-capcha"></p>
+        </div>
+      
+        <!-- Submit button -->
+        <button id="signup-btn" disabled>Sign up</button>
+      </form>
+
+    <script src="ui.js"></script>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Signup example (Simplified for Testing)</title>
+</head>
+<body>
+  <form>
+    <div>
+      <input type="text" id="first-name-field" />
+      <input type="text" id="last-name-field" />
+      <p id="validation-name"></p>
+    </div>
+
+    <div>
+      <input type="email" id="email-field" />
+      <p id="validation-email"></p>
+    </div>
+
+    <div>
+      <ul id="language-list">
+        <li contenteditable="true" class="placeholder"></li>
+      </ul>
+      <p id="validation-languages"></p>
+    </div>
+
+    <div>
+      <div>
+        <input type="text" id="capcha-field" />
+        <a href="#" id="reload-btn"></a>
+      </div>
+      <p id="validation-capcha"></p>
+    </div>
+
+    <div>
+      <button type="submit" id="signup-btn"></button>
+    </div>
+  </form>
+</body>
+</html>

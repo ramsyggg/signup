@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Test Model</title>
+</head>
+<body>
+    <form>
+        <!-- Name fields -->
+        <input type="text" id="first-name-field" placeholder="First name">
+        <input type="text" id="last-name-field" placeholder="Last name">
+        <p id="validation-name"></p>
+
+        <!-- Email field -->
+        <input type="email" id="email-field" placeholder="Email address">
+        <p id="validation-email"></p>
+
+        <!-- Language input -->
+        <ul id="language-list">
+            <li contenteditable="true" 
+                data-placeholder-content="Your favorite programming languages (3 required)">
+            </li>
+        </ul>
+        <p id="validation-languages"></p>
+
+        <!-- Captcha elements -->
+        <canvas id="op1"></canvas>
+        <canvas id="op2"></canvas>
+        <input type="text" id="capcha-field" placeholder="Your answer">
+        <a href="#" id="reload-btn">&#x21bb;</a>
+        <p id="validation-capcha"></p>
+
+        <!-- Submit button -->
+        <button type="submit" id="signup-btn" disabled>Sign up</button>
+    </form>
+</body>
+</html>
