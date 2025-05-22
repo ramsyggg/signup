@@ -276,7 +276,6 @@
     const value = emailField.value.trim();
     const validation = document.getElementById('validation-email');
 
-    // 1) формат
     if (!checkEmail()) {
       return false;
     }
@@ -412,13 +411,25 @@
    * Generate a new Capcha.
    */
   const generateCaphca = function () {
-    fetch('/capcha')
+    // Update the URL to point to your Spring Boot server
+    fetch('http://localhost:8080/api/capcha')
       .then((data) => {
         return data.json();
       })
       .then((data) => {
         op1 = data.op1;
         op2 = data.op2;
+        const canvasOp1 = document.getElementById('op1'),
+          canvasOp2 = document.getElementById('op2');
+
+        fillCapchaOperand(canvasOp1, op1);
+        fillCapchaOperand(canvasOp2, op2);
+      })
+      .catch((error) => {
+        console.error('Error fetching CAPTCHA:', error);
+        // Fallback: generate simple random numbers if server is unreachable
+        op1 = Math.round(Math.random() * 10);
+        op2 = Math.round(Math.random() * 10);
         const canvasOp1 = document.getElementById('op1'),
           canvasOp2 = document.getElementById('op2');
 

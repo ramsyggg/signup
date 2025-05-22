@@ -18,5 +18,5 @@ public class UserProfile {
     public String getInterestsPl() { return interestsPl; }
 
     public void setEmail(String email) { this.email = email; }
-    public void setInterests(String interestsPl) { this.interestsPl = this.interestsPl; }
+    public void setInterests(String interestsPl) { this.interestsPl = interestsPl; }
 }
