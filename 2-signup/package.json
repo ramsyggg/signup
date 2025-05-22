@@ -6,7 +6,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "node server.js",
-    "cypress": "cypress open"
+    "cypress": "cypress open",
+    "cypress:run-signupO": "npx cypress run --spec \"cypress/e2e/test-signup.cy.js\"",
+    "cypress:run-signup1": "npx cypress run --spec \"cypress/e2e/UIDSFullCodeFullTestCases.cy.js\"",
+    "cypress:run-signup2": "npx cypress run --spec \"cypress/e2e/UIQWFullCodeFullTestCases.cy.js\"",
+    "cypress:run-signup3": "npx cypress run --spec \"cypress/e2e/UIDSFullCodeNoTestCases.cy.js\""
   },
   "author": "",
   "license": "ISC",
@@ -15,5 +19,9 @@
     "director": "^1.2.8",
     "finalhandler": "^1.3.1",
     "serve-static": "^1.16.2"
+  },
+  "devDependencies": {
+    "cypress": "^14.3.3",
+    "mochawesome": "^7.1.3"
   }
 }

@@ -5,6 +5,8 @@ export default {
   reporter: 'mochawesome',
   defaultCommandTimeout: 100,
   e2e: {
+    specPattern: 'cypress/e2e/UIDSFullCodeNoTestCases.cy.js',
+    baseUrl: 'http://localhost:8080',
     setupNodeEvents(on, config) {
       // implement node event listeners here
     }
